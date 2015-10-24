@@ -3,7 +3,8 @@ l = 0.75; /* ledge thickness */
 t = 3.0; /* thickness */
 h = 20.0; /* height */
 b = 5.0; /* bottom clearance */
-
+difference() {
+union() {
 /* front face */
 difference() {
 	translate([0, -t, -b]) {
@@ -11,15 +12,15 @@ difference() {
 	}
 	union() {
 		translate([1 - (r/2), -t, 1 - (r/2)]) {
-			cube([11 + r, 15, 1 + r]);
+			cube([12 + r, 15, 1.5 + r]);
 		}
-		translate([18 - (r/2), -t, 2 - (r/2)]) {
+		translate([17 - (r/2), -t, 2 - (r/2)]) {
 			cube([14.5 + r, 9, 5 + r]);
 		}
-		translate([37 - (r/2), -t, 1 - (r/2)]) {
+		translate([38 - (r/2), -t, 1 - (r/2)]) {
 			cube([7.5 + r, 5.25 , 3 + r]);
 		}
-		translate([49 - (r/2), -t, 2 - (r/2)]) {
+		translate([50 - (r/2), -t, 2 - (r/2)]) {
 			cube([14 + r, 14 , 7 + r]);
 		}
 		translate([69 - (r/2), -t, 2 - (r/2)]) {
@@ -83,6 +84,13 @@ difference() {
 /* bottom face */
 translate([0, -t, -b - t]) {
 	cube([85, 54 + 2*t, t]);
+}
+}
+
+translate([-.5, -.5, 0]) {
+	cube([85+1, 54+1, h]);
+}
+
 }
 
 /* ledge */
