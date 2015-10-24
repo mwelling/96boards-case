@@ -17,7 +17,7 @@ difference() {
 		translate([17.5 - (r/2), -t, 2 - (r/2)]) {
 			cube([14.5 + r, 9, 5 + r]);
 		}
-		translate([36.25 - (r/2), -t, 1 - (r/2)]) {
+		translate([37.75 - (r/2), -t, 1 - (r/2)]) {
 			cube([7.5 + r, 5.25 , 3 + r]);
 		}
 		translate([49.5 - (r/2), -t, 2 - (r/2)]) {
